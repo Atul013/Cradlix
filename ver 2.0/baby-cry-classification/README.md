@@ -224,8 +224,6 @@ This project is licensed under the MIT License - see the `LICENSE.md` file for d
 
 ## Model Card Contact
 
-For inquiries and contributions, please contact us at info@foduu.com.
-
 ```bibtex
 @ModelCard{
     author       = {Icarus013},

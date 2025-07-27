@@ -228,9 +228,8 @@ For inquiries and contributions, please contact us at info@foduu.com.
 
 ```bibtex
 @ModelCard{
-    author       = {Nehul Agrawal and
-                              Priyal Mehta},
-    title         = {baby Cry Classifier},
-    year           = {2024}
+    author       = {Icarus013},
+    title         = {Baby Cry Classifier},
+    year           = {2025}
 }
 ```

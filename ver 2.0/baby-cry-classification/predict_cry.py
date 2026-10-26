@@ -1,6 +1,12 @@
 import joblib
 import librosa
 import numpy as np
+from pathlib import Path
+
+
+ARTIFACT_DIR = Path(__file__).resolve().parent
+DEFAULT_MODEL_PATH = ARTIFACT_DIR / 'model.joblib'
+DEFAULT_LABEL_PATH = ARTIFACT_DIR / 'label.joblib'
 
 # Define constants for feature extraction
 n_fft = 2048
@@ -55,11 +61,11 @@ def extract_features(file_path):
         print(f"Error: Exception occurred in feature extraction - {str(e)}")
         return None
 
-def predict_cry(file_path):
+def predict_cry(file_path, model_path=None, label_path=None):
     try:
         # Load the saved model and LabelEncoder
-        model_path = 'e:/Projects/Cradlix/ver 2.0/baby-cry-classification/model.joblib'
-        label_path = 'e:/Projects/Cradlix/ver 2.0/baby-cry-classification/label.joblib'
+        model_path = Path(model_path) if model_path is not None else DEFAULT_MODEL_PATH
+        label_path = Path(label_path) if label_path is not None else DEFAULT_LABEL_PATH
         loaded_model = joblib.load(model_path)
         loaded_le = joblib.load(label_path)
         
